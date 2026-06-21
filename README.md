@@ -87,6 +87,11 @@ The icon set is generated, not hand-drawn. To regenerate after a design tweak:
 swift Tools/generate-appicon.swift
 ```
 
+## License
+
+Licensed under the [GNU General Public License v3.0](LICENSE) — derivatives must
+remain open-source under the same license.
+
 ## Credits
 
 Inspired by *File Date Changer 5* by Frank Reiff (publicspace.net), which is no
