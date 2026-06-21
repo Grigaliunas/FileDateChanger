@@ -28,8 +28,10 @@ The `FileDateChangerTests` target uses **Swift Testing** (`import Testing`,
   files and read the dates back; compare at whole-second granularity because
   on-disk dates carry sub-second noise.
 
-It is a hosted test bundle (`TEST_HOST` = the app) so `@testable import
-FileDateChanger` works; the app must keep `ENABLE_TESTABILITY = YES` in Debug.
+It is a hosted test bundle (`TEST_HOST` = the app) so `@testable import ReStamp`
+works; the app must keep `ENABLE_TESTABILITY = YES` in Debug. Note: the user-facing
+product/module is **ReStamp** (`PRODUCT_NAME`, bundle id `com.sarunas.ReStamp`),
+while the Xcode target, scheme, and source folder are still named *FileDateChanger*.
 The shared scheme wires the test target into the Test action. New `.swift` files
 dropped into `FileDateChangerTests/` are picked up automatically (synchronized
 group) — no `project.pbxproj` edits needed.
