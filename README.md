@@ -1,5 +1,7 @@
 # File Date Changer
 
+[![CI](https://github.com/Grigaliunas/FileDateChanger/actions/workflows/ci.yml/badge.svg)](https://github.com/Grigaliunas/FileDateChanger/actions/workflows/ci.yml)
+
 A native macOS app for batch-changing the **creation** and **modification** dates
 of files and folders. A modern SwiftUI reimplementation of the discontinued
 *File Date Changer 5* by Frank Reiff.
