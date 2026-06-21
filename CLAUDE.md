@@ -34,6 +34,18 @@ The shared scheme wires the test target into the Test action. New `.swift` files
 dropped into `FileDateChangerTests/` are picked up automatically (synchronized
 group) — no `project.pbxproj` edits needed.
 
+## Workflow & releasing
+
+`main` is protected: changes land via PR, and the required `Build & Test (macOS)`
+check (`.github/workflows/ci.yml`) must pass before merge (enforced for admins
+too). Typical loop: branch → PR → `gh pr merge --squash --auto` → it self-merges
+when CI is green and the branch auto-deletes.
+
+To release: add the version's notes under a `## [x.y.z]` heading in
+`CHANGELOG.md`, then push a matching `vx.y.z` tag. `.github/workflows/release.yml`
+fires on `v*` tags, extracts that changelog section, and creates the GitHub
+release (idempotent; falls back to auto-generated notes if the section is absent).
+
 ## Project layout & conventions
 
 - The Xcode project uses a **file-system-synchronized root group** (`objectVersion = 77`).
