@@ -6,6 +6,8 @@ of files and folders. A modern SwiftUI reimplementation of the discontinued
 
 > Requires macOS 14 (Sonoma) or later.
 
+![File Date Changer showing a live preview of date changes across several files](docs/screenshot.png)
+
 ## Features
 
 - **Drag & drop** files/folders onto the window, or **File ▸ Add Files… (⌘O)**.
