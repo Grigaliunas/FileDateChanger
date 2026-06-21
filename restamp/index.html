@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReStamp — Change file dates on macOS</title>
+  <meta name="description" content="ReStamp is a fast, native macOS app for batch-changing the creation and modification dates of your files and folders." />
+  <link rel="icon" href="./icon.png" />
+  <meta property="og:title" content="ReStamp — Change file dates on macOS" />
+  <meta property="og:description" content="Batch-change creation and modification dates of files and folders. Native, fast, with a live preview." />
+  <meta property="og:image" content="./screenshot.png" />
+  <meta property="og:type" content="website" />
+  <style>
+    :root {
+      --bg: #0b1020;
+      --bg-2: #11182e;
+      --card: #151d33;
+      --text: #e8ecf5;
+      --muted: #9aa6bf;
+      --accent: #2f6bff;
+      --accent-2: #6ea8fe;
+      --border: #233152;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 50% -10%, #1b2747 0%, var(--bg) 55%) no-repeat, var(--bg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent-2); }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+    header.hero { text-align: center; padding: 88px 0 56px; }
+    .logo {
+      width: 104px; height: 104px; border-radius: 24px;
+      box-shadow: 0 18px 50px rgba(47, 107, 255, 0.35);
+      margin-bottom: 22px;
+    }
+    h1 { font-size: clamp(2.4rem, 6vw, 3.6rem); margin: 0 0 8px; letter-spacing: -0.02em; }
+    .tagline { font-size: clamp(1.05rem, 2.6vw, 1.35rem); color: var(--muted); margin: 0 auto 28px; max-width: 620px; }
+
+    .cta { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: linear-gradient(180deg, var(--accent-2), var(--accent));
+      color: #fff; text-decoration: none; font-weight: 600; font-size: 1.05rem;
+      padding: 14px 28px; border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(47, 107, 255, 0.4);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(47, 107, 255, 0.5); }
+    .btn small { font-weight: 400; opacity: 0.85; }
+    .req { color: var(--muted); font-size: 0.86rem; }
+
+    .shot {
+      width: 100%; border-radius: 14px; border: 1px solid var(--border);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.5); margin: 8px 0 0; display: block;
+    }
+    section { padding: 56px 0; }
+    h2 { font-size: 1.6rem; letter-spacing: -0.01em; margin: 0 0 24px; text-align: center; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+    .card {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 22px;
+    }
+    .card h3 { margin: 0 0 6px; font-size: 1.08rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.96rem; }
+    .icon { font-size: 1.5rem; }
+
+    .note {
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 12px;
+      padding: 16px 20px; color: var(--muted); font-size: 0.92rem; margin-top: 28px;
+    }
+    .note code { background: #0c1326; padding: 2px 6px; border-radius: 6px; color: var(--accent-2); }
+
+    footer { text-align: center; color: var(--muted); font-size: 0.86rem; padding: 40px 0 60px; border-top: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <img class="logo" src="./icon.png" alt="ReStamp icon" />
+      <h1>ReStamp</h1>
+      <p class="tagline">Batch-change the creation &amp; modification dates of your files and folders — with a live preview, on native macOS.</p>
+      <div class="cta">
+        <a class="btn" href="./ReStamp.zip" download>
+          ⬇️ Download for macOS <small>· .zip</small>
+        </a>
+        <span class="req">Requires macOS 14 (Sonoma) or later · Apple&nbsp;Silicon &amp; Intel</span>
+      </div>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <img class="shot" src="./screenshot.png" alt="ReStamp showing a live preview of date changes across several files" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What it does</h2>
+      <div class="grid">
+        <div class="card"><div class="icon">📅</div><h3>Set a specific date</h3><p>Stamp any file or folder with an exact creation and/or modification date and time.</p></div>
+        <div class="card"><div class="icon">⏩</div><h3>Shift time</h3><p>Add or subtract days, hours, minutes and seconds from existing dates.</p></div>
+        <div class="card"><div class="icon">🔁</div><h3>Copy &amp; lift</h3><p>Copy creation↔modification, or lift both dates from another reference file.</p></div>
+        <div class="card"><div class="icon">🚫</div><h3>Remove dates</h3><p>Clear dates entirely — the Finder then shows the item as <code>-----</code>.</p></div>
+        <div class="card"><div class="icon">👁️</div><h3>Live preview</h3><p>See exactly what each file's new dates will be before you apply anything.</p></div>
+        <div class="card"><div class="icon">⚡</div><h3>Batch &amp; safe</h3><p>Drag in many files at once. Auto-corrects impossible dates; confirms before writing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Removing dates</h2>
+      <img class="shot" src="./screenshot-remove.png" alt="The Remove dates action previewing files whose dates will become -----" />
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div style="text-align:center">
+        <a class="btn" href="./ReStamp.zip" download>⬇️ Download ReStamp <small>· .zip</small></a>
+      </div>
+      <div class="note">
+        <strong>First launch:</strong> ReStamp is distributed unsigned, so macOS Gatekeeper will warn on first open.
+        After downloading, unzip it, then <strong>right-click the app → Open → Open</strong> (only needed once).
+        ReStamp runs entirely on your Mac — no files ever leave your computer.
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      ReStamp · a native macOS file-date tool · built with SwiftUI<br />
+      Inspired by the discontinued <em>File Date Changer 5</em>.
+    </div>
+  </footer>
+</body>
+</html>

@@ -16,7 +16,7 @@
 
 import Testing
 import Foundation
-@testable import FileDateChanger
+@testable import ReStamp
 
 struct FileDateServiceTests {
 

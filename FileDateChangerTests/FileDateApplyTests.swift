@@ -16,7 +16,7 @@
 
 import Testing
 import Foundation
-@testable import FileDateChanger
+@testable import ReStamp
 
 /// Integration tests that exercise `FileDateService.apply` against real files on
 /// disk, then read the dates back to confirm the write actually took effect.

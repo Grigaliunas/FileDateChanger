@@ -17,7 +17,7 @@
 import SwiftUI
 
 @main
-struct FileDateChangerApp: App {
+struct ReStampApp: App {
     @StateObject private var model = AppModel()
 
     var body: some Scene {
