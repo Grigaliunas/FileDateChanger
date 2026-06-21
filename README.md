@@ -27,6 +27,13 @@ of files and folders. A modern SwiftUI reimplementation of the discontinued
   modification ≥ creation, mirroring the rules macOS enforces.
 - **Batch apply** with a confirmation step and a success/error summary.
 
+### Removing dates
+
+The **Remove dates** action clears the selected dates so the Finder shows the
+item as `-----`:
+
+![The Remove dates action previewing three files whose dates will become -----](docs/screenshot-remove-dates.png)
+
 ## Build & run
 
 ```bash
