@@ -25,3 +25,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Auto-correct inconsistent dates (clamp future dates to now; keep modification ≥ creation).
 - Batch apply with a confirmation step and a success/error summary.
 - Generated app icon (`Tools/generate-appicon.swift`).
+
+[Unreleased]: https://github.com/Grigaliunas/FileDateChanger/compare/v1.0.0...HEAD
+[1.0.0]: https://github.com/Grigaliunas/FileDateChanger/releases/tag/v1.0.0
