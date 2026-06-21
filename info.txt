@@ -1,0 +1,47 @@
+File Date Changer 5.24
+File date changing tool
+Category:	Utilities
+Price:	Low
+Popularity:	Low
+Version String:	5.24.1
+Release Date:	2019-11-28
+Architecture:	Intel
+Minimum OS:	macOS 10.10
+Vendor Name:	Frank Reiff
+Homepage:	www.publicspace.net
+Note:
+This app is no longer available on the 'Mac App Store', may have been discontinued by its vendor and may be unavailable for download.
+
+
+Description:
+File Date Changer 5 is the ultimate file date changing tool for Mac OS X.
+
+With File Date Changer you are free to change the creation and modification dates of your files or folders at will.
+
+File Date Changer lets you:
+
+• set file creation and modification dates to a specific date and/or time
+• add and remove time from existing file dates
+• copy existing creation dates onto the modification dates and vice versa
+• lift file creation or modification dates from existing files
+• remove file dates, so that they appear as '-----' in the Finder
+
+File Date Changer 5 features an elegant and intuitive interface with many advanced features. Simply drag & drop the files you want to change into the file list, select an action from the popup menu and modify the settings to your liking, then click on 'Perform Changes'.
+
+OTHER NOTABLE FEATURES
+
+• batch operation
+• powerful preview pane
+• support for macOS 10.14 Mojave Dark Mode
+• drag & drop into the file list or onto the application icon
+• select files in the Finder and activate File Date Changer via the Finder context menu or via a hot key
+• automatically deals with file date consistency rules
+• separate processing for files and folders, batch processing of sub-folders
+
+MAC OS X LIMITATIONS ON FILE DATES
+
+Please note that Mac OS X imposes a number of 'common sense' rules when it comes to file dates and will not allow you to set dates to 'invalid' values.
+
+In particular, you cannot set the dates to future values (i.e. later than now) and files cannot be modified before they are created. File Date Changer 5 can automatically take care of these complications for you via the 'automatically correct inconsistent dates' feature.
+
+Also note that while File Date Changer will let you set dates before 1972, the Mac OS X Finder does not 'like' such dates and as soon as you point the Finder to such a file, it will 'correct' this date to the 1st of January 1972.
