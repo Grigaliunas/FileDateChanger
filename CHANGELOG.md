@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-06-21
+
+### Changed
+
+- Maintenance release: added GitHub Actions release automation and wired up the
+  changelog comparison links. No changes to the app itself.
+
 ## [1.0.0] - 2026-06-21
 
 ### Added
@@ -26,5 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Batch apply with a confirmation step and a success/error summary.
 - Generated app icon (`Tools/generate-appicon.swift`).
 
-[Unreleased]: https://github.com/Grigaliunas/FileDateChanger/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/Grigaliunas/FileDateChanger/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/Grigaliunas/FileDateChanger/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/Grigaliunas/FileDateChanger/releases/tag/v1.0.0
