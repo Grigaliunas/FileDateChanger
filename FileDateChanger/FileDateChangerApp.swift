@@ -25,6 +25,7 @@ struct ReStamperApp: App {
             ContentView()
                 .environmentObject(model)
                 .frame(minWidth: 820, minHeight: 480)
+                .onAppear { model.applyScreenshotSeedIfRequested() }
         }
         .commands {
             CommandGroup(replacing: .newItem) {
