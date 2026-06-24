@@ -16,7 +16,7 @@
 
 import Testing
 import Foundation
-@testable import ReStamp
+@testable import ReStamper
 
 /// Tests for the `AppModel` store (list management + derived state). The model is
 /// `@MainActor`, so the suite is too.

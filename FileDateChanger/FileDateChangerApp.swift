@@ -17,7 +17,7 @@
 import SwiftUI
 
 @main
-struct ReStampApp: App {
+struct ReStamperApp: App {
     @StateObject private var model = AppModel()
 
     var body: some Scene {
