@@ -122,3 +122,58 @@ final class AppModel: ObservableObject {
         lastResult = ProcessResult(succeeded: succeeded, failed: failed, errors: errors)
     }
 }
+
+extension AppModel {
+    /// DEBUG-only: populates the list with curated sample data so marketing
+    /// screenshots are reproducible. Triggered by `--screenshot-seed=main|remove`
+    /// on launch. Compiles to a no-op in release builds (never ships).
+    func applyScreenshotSeedIfRequested() {
+        #if DEBUG
+        let prefix = "--screenshot-seed="
+        guard let arg = ProcessInfo.processInfo.arguments.first(where: { $0.hasPrefix(prefix) })
+        else { return }
+        let mode = String(arg.dropFirst(prefix.count))
+
+        let fmt = DateFormatter()
+        fmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        fmt.locale = Locale(identifier: "en_US_POSIX")
+        func date(_ s: String) -> Date { fmt.date(from: s)! }
+        func item(_ name: String, _ created: String, _ modified: String) -> FileItem {
+            FileItem(url: URL(fileURLWithPath: "/Users/Sample/\(name)"),
+                     creationDate: date(created), modificationDate: date(modified),
+                     isDirectory: false)
+        }
+
+        switch mode {
+        case "main":
+            items = [
+                item("Vacation Photo.jpg", "2019-07-04 14:30:00", "2019-07-04 14:30:00"),
+                item("Tax Return.pdf",     "2021-04-15 09:05:00", "2021-04-15 09:05:00"),
+                item("Meeting Notes.txt",  "2018-11-02 18:45:00", "2018-11-02 18:45:00"),
+            ]
+            config.kind = .setSpecific
+            config.fields = .both
+            config.specificDate = date("2026-06-21 14:53:57")
+        case "remove":
+            items = [
+                item("Scanned Contract.pdf", "2016-03-22 11:00:00", "2016-03-22 11:00:00"),
+                item("IMG_4521.jpg",         "2020-08-09 16:20:00", "2020-08-09 16:20:00"),
+                item("Old Backup.zip",       "2014-12-01 19:45:00", "2014-12-01 19:45:00"),
+            ]
+            config.kind = .removeDates
+            config.fields = .both
+        default:
+            return
+        }
+
+        // Force light appearance and a deterministic window size for the shot.
+        DispatchQueue.main.async {
+            NSApp.appearance = NSAppearance(named: .aqua)
+            if let window = NSApp.windows.first {
+                window.setContentSize(NSSize(width: 1100, height: 640))
+                window.center()
+            }
+        }
+        #endif
+    }
+}
