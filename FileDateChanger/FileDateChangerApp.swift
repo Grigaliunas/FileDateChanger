@@ -15,9 +15,21 @@
 // along with this program. If not, see <https://www.gnu.org/licenses/>.
 
 import SwiftUI
+import AppKit
+
+/// ReStamper is a single-window utility. macOS App Review (Guideline 4 — Design)
+/// requires that closing the main window not leave the app running with no way to
+/// bring a window back. For a single-window app the sanctioned behavior is to quit
+/// when the last window is closed; a Dock-icon click still relaunches it fresh.
+final class AppDelegate: NSObject, NSApplicationDelegate {
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        true
+    }
+}
 
 @main
 struct ReStamperApp: App {
+    @NSApplicationDelegateAdaptor(AppDelegate.self) private var appDelegate
     @StateObject private var model = AppModel()
 
     var body: some Scene {
